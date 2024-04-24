@@ -31,8 +31,8 @@ app.on("ready", () => {
         webviewTag: true,
         // nativeWindowOpen: true,
       },
-      width: 450,
-      height: 550,
+      width: 830,
+      height: 600,
     },
     tray,
     showOnAllWorkspaces: true,
@@ -76,18 +76,7 @@ app.on("ready", () => {
       {
         type: "separator",
       },
-      {
-        label: "View on GitHub",
-        click: () => {
-          shell.openExternal("https://github.com/vincelwt/chatgpt-mac");
-        },
-      },
-      {
-        label: "Author on Twitter",
-        click: () => {
-          shell.openExternal("https://twitter.com/vincelwt");
-        },
-      },
+     
     ];
 
     tray.on("right-click", () => {
@@ -146,6 +135,7 @@ app.on("ready", () => {
         if (key === "y") contents.redo();
         if (key === "q") app.quit();
         if (key === "r") contents.reload();
+     
       });
     }
   });
